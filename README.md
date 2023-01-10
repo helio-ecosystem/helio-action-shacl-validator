@@ -10,7 +10,7 @@ Use the following coordinates for import this action:
 
 ````json
 {
-    "source": "",
+    "source": "https://github.com/helio-ecosystem/helio-action-shacl-validator/releases/download/v0.1.0/helio-action-shacl-validator-0.1.0.jar",
     "clazz": "helio.action.shacl.validator.ShaclValidator",
     "type": "ACTION"
 }
