@@ -14,6 +14,7 @@ Use the following coordinates for import this action:
     "clazz": "helio.action.shacl.validator.ShaclValidator",
     "type": "ACTION"
 }
+````
 
 ### Configuration
 
