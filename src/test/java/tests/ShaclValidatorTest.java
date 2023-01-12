@@ -81,6 +81,19 @@ public class ShaclValidatorTest {
 	}
 	
 	@Test
+	public void testNullConfiguration() {
+		boolean thrown = false;
+		try {
+			validator.configure(null);
+		}catch(Exception e) {
+			if(showErrorMessages)
+				System.out.println(e.toString());
+			thrown = true; 
+		}
+		Assert.assertTrue(thrown);
+	}
+	
+	@Test
 	public void testEmptyConfiguration() {
 		JsonObject config = new JsonObject();
 		boolean thrown = false;

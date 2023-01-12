@@ -38,6 +38,8 @@ public class ShaclValidator implements Action {
 	public void configure(JsonObject configuration) {
 		Graph shapesGraph = null;
 		Lang format = Lang.TURTLE;
+		if(configuration==null)
+			throw new IllegalArgumentException("Provide a valid configuration containing a json key 'shape' which value can be a URL that provides a SHACL shape or an RDF excerpt that is the shape. Optionaly, they key 'format' can be used to specify the serialisation of the shape.");
 		if (configuration.has(SHAPE_TOKEN)) {
 			if (configuration.has(SHAPE_FORMAT_TOKEN))
 				format = parseFormat(configuration.get(SHAPE_FORMAT_TOKEN).getAsString());
